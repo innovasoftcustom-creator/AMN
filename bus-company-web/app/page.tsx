@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:gap-6">
           <a
-            href="/login"
+            href="/login/usuario"
             className="transform rounded-lg bg-white px-8 py-3 font-semibold text-black no-underline transition-all duration-300 hover:scale-105 hover:bg-gray-200"
           >
             Entrar como Usuario
