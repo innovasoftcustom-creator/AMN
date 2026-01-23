@@ -1,13 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function UserLoginPage() {
+  const router = useRouter();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Por ahora, redirigimos directamente sin validación
+    router.push("/panel-usuario");
+  };
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-black p-4 text-white">
       <div className="w-full max-w-md rounded-lg bg-neutral-900 p-8 shadow-lg">
         <h1 className="mb-6 text-center text-3xl font-bold">
           Inicio de Sesión de Usuario
         </h1>
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <div>
             <label
               htmlFor="email"
